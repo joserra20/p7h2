@@ -12,8 +12,31 @@ import org.springframework.data.relational.core.mapping.Table;
 @NoArgsConstructor
 @Table("SOCIEDADES")
 public class SociedadesTable {
-    private @Column("ID")
-    @Id Long id;
+    private @Column("ID") @Id Long id;
     private @Column("NOMBRE") String nombre;
     private @Column("CIF") String cif;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCif() {
+        return cif;
+    }
+
+    public void setCif(String cif) {
+        this.cif = cif;
+    }
 }
