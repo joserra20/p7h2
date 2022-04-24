@@ -28,6 +28,16 @@ public class EmpleadosServiceImpl implements EmpleadosService {
     }
 
     @Override
+    public List<EmpleadoDTO> getEmpleadosWithSociedad(Long idSociedad) {
+        return empleadosRepository.getEmpleadosWithSociedad(idSociedad);
+    }
+
+    @Override
+    public List<EmpleadoDTO> getEmpleadosConSociedades() {
+        return empleadosRepository.getEmpleadosConSociedades();
+    }
+
+    @Override
     public void addEmpleado(EmpleadoDTO empleado) {
         String nombre = empleado.nombre();
         String apellidos = empleado.apellidos();

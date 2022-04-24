@@ -10,6 +10,10 @@ public interface EmpleadosService {
 
     List<EmpleadoDTO> getEmpleados();
 
+    List<EmpleadoDTO> getEmpleadosWithSociedad(Long idSociedad);
+
+    List<EmpleadoDTO> getEmpleadosConSociedades();
+
     void addEmpleado(EmpleadoDTO empleado);
 
     void deleteEmpleado(String id);

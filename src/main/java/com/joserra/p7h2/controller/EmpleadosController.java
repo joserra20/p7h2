@@ -1,5 +1,6 @@
 package com.joserra.p7h2.controller;
 
+import com.joserra.p7h2.repository.EmpleadosRepository;
 import com.joserra.p7h2.service.EmpleadosService;
 import com.joserra.p7h2.service.dto.EmpleadoDTO;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,6 +19,22 @@ public class EmpleadosController {
     public ResponseEntity<List<EmpleadoDTO>> getEmpleados(){
 
         var empleados = empleadosService.getEmpleados();
+
+        return ResponseEntity.ok().body(empleados);
+    }
+
+    @GetMapping("/empleados/sociedad={id}")
+    public ResponseEntity<List<EmpleadoDTO>> getEmpleadosWithSociedad(@PathVariable("id") Long id){
+
+        var empleados = empleadosService.getEmpleadosWithSociedad(id);
+
+        return ResponseEntity.ok().body(empleados);
+    }
+
+    @GetMapping("/empleados/vistaSociedades")
+    public ResponseEntity<List<EmpleadoDTO>> getEmpleadosConSociedades(){
+
+        var empleados = empleadosService.getEmpleadosConSociedades();
 
         return ResponseEntity.ok().body(empleados);
     }
