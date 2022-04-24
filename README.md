@@ -6,7 +6,9 @@ En este desarrollo de SpringBoot se ha desplegado un sistema H2 de base de datos
 ### Operaciones
 #### Consultas
 Se puede consultar los empleados de una determinada sociedad (JOIN) o la totalidad.
+#### Consultar empleados de una determinada sociedad (INNER JOIN)
 #### Insertar empleado
+#### Actualizar empleado
 #### Insertar sociedad
 #### Eliminar empleado
 ### GitPod
